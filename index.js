@@ -20,3 +20,12 @@ function exactMatch(drivers, cond) {
    });
    return metCond;
 }
+
+function exactMatchToList(extendedDrivers, cond) {
+  return exactMatch(extendedDrivers, cond).map(
+     function(d) {
+       return d.name;
+     }
+   );
+}
+
